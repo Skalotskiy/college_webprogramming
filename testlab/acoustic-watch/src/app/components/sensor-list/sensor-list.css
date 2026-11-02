@@ -1,0 +1,17 @@
+
+.sensors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .sensors {
+    grid-template-columns: 1fr;
+  }
+}

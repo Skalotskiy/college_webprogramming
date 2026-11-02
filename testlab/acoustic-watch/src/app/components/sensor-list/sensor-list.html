@@ -1,0 +1,9 @@
+<section aria-labelledby="sensor-list-title">
+  <h2 id="sensor-list-title">Сенсори міста Львова</h2>
+
+  <div class="sensors">
+    @for (sensor of sensors; track sensor.id) {
+      <app-sensor-card [sensor]="sensor" />
+    }
+  </div>
+</section>

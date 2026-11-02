@@ -1,0 +1,15 @@
+<article
+  class="sensor-card"
+  [class.warning]="sensor().noiseLevel > 70"
+  [class.inactive]="sensor().status === 'inactive'"
+>
+  <h3>{{ sensor().name }}</h3>
+  <p>Район: {{ sensor().district }}</p>
+  <p [appHighlight]="sensor().noiseLevel > 70">Рівень шуму: {{ sensor().noiseLevel }} дБ</p>
+
+  @if (sensor().status === 'active') {
+    <span class="status">Активний</span>
+  } @else {
+    <span class="status">Неактивний</span>
+  }
+</article>
